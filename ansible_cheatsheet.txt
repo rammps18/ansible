@@ -2,3 +2,13 @@ ansible --list-hosts all
 
 ansible -i dev --list-hosts all
 
+ansible --list-hosts \!control
+
+ansible -m ping control01
+
+ansible -m command -a "hostname" control01
+
+ansible -a "hostname" control01
+
+ansible-playbook playbooks/hostname.yml
+
